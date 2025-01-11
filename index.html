@@ -7,15 +7,30 @@
     <link rel="icon" href="./assets/images/wit_logo.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
-
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-logo">
+                <img class="logo" src="./assets/images/logo2.png" alt="">
+                <a href="#" class="navbar-logo">WIT IIITD <br> A Student Chapter</a>
+            </div>
+            
+            <ul class="navbar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#past-events">Events</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <div class="main">
-        <section class="hero">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
             <div class="translucent-div"></div>
             <div class="hero-content">
                 <h1>Women in Tech IIITD</h1>
@@ -25,9 +40,75 @@
                     <i class="ri-arrow-down-line"></i>
                 </div>
             </div>
-            
         </section>
-    
+
+        <section id="past-events" class="past-events">
+            <div class="past-events-heading">
+                <h1>Our Past Events</h1>
+                <h2>And <span class="many-more">many more</span>  to come</h2>
+            </div>
+            <div class="past-events-container">
+                <div class="event-container">
+                    <div class="event-image">
+                        <img src="./assets/images/odyssey.png" alt="Event 1">
+                    </div>
+                    <div class="event-details">
+                        <h2>Odyssey: Tech <br>
+                            Stand-Up Comedy </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                </div>
+                <div class="event-container">
+                    <div class="inner">
+                        <div class="event-image">
+                            <img src="./assets/images/google-step.png" alt="Event 2">
+                        </div>
+                        <div class="event-details">
+                            <h2>Google STEP <br>Mentorship Session</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-container">
+                    <div class="event-image">
+                        <img src="./assets/images/mentorship.png" alt="Event 3">
+                    </div>
+                    <div class="event-details">
+                        <h2>Google STEP <br>Mentorship Session</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                </div>
+                <div class="event-container">
+                    <div class="event-image">
+                        <img src="./assets/images/induction.png" alt="Event 4">
+                    </div>
+                    <div class="event-details">
+                        <h2>WiT Team Induction </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                </div>
+                <div class="event-container">
+                    <div class="event-image">
+                        <img src="./assets/images/alumni.png" alt="Event 4">
+                    </div>
+                    <div class="event-details">
+                        <h2>Alumni Chat</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                </div>
+                <div class="event-container">
+                    <div class="event-image">
+                        <img src="./assets/images/lorem.png" alt="Event 4">
+                    </div>
+                    <div class="event-details">
+                        <h2>Google STEP <br>Mentorship Session</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
         <section id="team" class="team">
             <div class="team-heading">     
                 <h1>Our dream team</h1>
@@ -38,18 +119,18 @@
             <div class="team-members">
                 <div class="member-container">
                     <div class="img-container">
-                        <img src="./assets/images/yrj.png">
+                        <img src="./assets/images/yrj.png" alt="Yash Raj Ojha">
                     </div>
                     <div class="name-container">
                         <h3 class="name">Yash Raj Ojha</h3>
                         <h3 class="designation">Mentor</h3>
                     </div>
                 </div>
-    
+
                 <div class="coord-container">
                     <div class="member-container">
                         <div class="img-container">
-                            <img src="./assets/images/Ayana.png">
+                            <img src="./assets/images/Ayana.png" alt="Ayana">
                         </div>
                         <div class="name-container">
                             <h3 class="name">Ayana</h3>
@@ -58,7 +139,7 @@
                     </div>
                     <div class="member-container">
                         <div class="img-container">
-                            <img src="./assets/images/Jessica_Chawla.png">
+                            <img src="./assets/images/Jessica_Chawla.png" alt="Jessica Chawla">
                         </div>
                         <div class="name-container">
                             <h3 class="name">Jessica Chawla</h3>
@@ -67,7 +148,7 @@
                     </div>
                     <div class="member-container">
                         <div class="img-container">
-                            <img src="./assets/images/Sneha_Nagpal.png">
+                            <img src="./assets/images/Sneha_Nagpal.png" alt="Sneha Nagpal">
                         </div>
                         <div class="name-container">
                             <h3 class="name">Sneha Nagpal</h3>
@@ -76,20 +157,19 @@
                     </div>
                     <div class="member-container">
                         <div class="img-container">
-                            <img src="./assets/images/.png">
+                            <img src="./assets/images/.png" alt="Komal">
                         </div>
                         <div class="name-container">
                             <h3 class="name">Komal</h3>
                             <h3 class="designation">Coordinator</h3>
                         </div>
                     </div>
-    
                 </div>
-    
+
                 <div class="lead-container">
                     <div class="member-container">
                         <div class="img-container">
-                            <img src="./assets/images/Aditi_Sharma.png">
+                            <img src="./assets/images/Aditi_Sharma.png" alt="Aditi Sharma">
                         </div>
                         <div class="name-container">
                             <h3 class="name">Aditi Sharma</h3>
@@ -98,7 +178,7 @@
                     </div>
                     <div class="member-container">
                         <div class="img-container">
-                            <img src="./assets/images/Abhigyan.png">
+                            <img src="./assets/images/Abhigyan.png" alt="Abhigyan">
                         </div>
                         <div class="name-container">
                             <h3 class="name">Abhigyan</h3>
@@ -107,7 +187,7 @@
                     </div>
                     <div class="member-container">
                         <div class="img-container">
-                            <img src="./assets/images/Divyanshi.png">
+                            <img src="./assets/images/Divyanshi.png" alt="Divyanshi">
                         </div>
                         <div class="name-container">
                             <h3 class="name">Divyanshi</h3>
@@ -116,7 +196,7 @@
                     </div>
                     <div class="member-container">
                         <div class="img-container">
-                            <img src="./assets/images/Vanshika.png">
+                            <img src="./assets/images/Vanshika.png" alt="Vanshika">
                         </div>
                         <div class="name-container">
                             <h3 class="name">Vanshika</h3>
@@ -125,7 +205,7 @@
                     </div>
                     <div class="member-container">
                         <div class="img-container">
-                            <img src="./assets/images/Sushant.png">
+                            <img src="./assets/images/Sushant.png" alt="Sushant">
                         </div>
                         <div class="name-container">
                             <h3 class="name">Sushant</h3>
@@ -134,39 +214,20 @@
                     </div>
                     <div class="member-container">
                         <div class="img-container">
-                            <img src="./assets/images/Vedika_Agarwal.png">
+                            <img src="./assets/images/Vedika_Agarwal.png" alt="Vedika Agarwal">
                         </div>
                         <div class="name-container">
                             <h3 class="name">Vedika Agarwal</h3>
                             <h3 class="designation">Events Lead</h3>
                         </div>
                     </div>
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/yrj-copy.png">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Yash Raj Ojha</h3>
-                            <h3 class="designation">Mentor</h3>
-                        </div>
-                    </div>
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/yrj-copy.png">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Yash Raj Ojha</h3>
-                            <h3 class="designation">Mentor</h3>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
+
+        
     </div>
-    
+
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512
