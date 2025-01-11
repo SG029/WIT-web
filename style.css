@@ -61,6 +61,52 @@ body {
 section {
   padding: 50px 20px;
 }
+
+
+.burger-menu {
+  display: none; /* Hide by default */
+  position: relative;
+  z-index: 1001; /* Ensure it's above the navbar */
+  cursor: pointer;
+}
+
+.burger-menu i {
+  font-size: 2rem;
+  color: #f7b32b; /* Or your desired color */
+  text-decoration: none; 
+}
+
+/* Media Query for responsiveness (e.g., 768px) */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block; /* Show the burger menu */
+  }
+
+  .navbar-menu {
+    display: none; /* Hide the regular menu */
+    position: absolute;
+    top: 70px; /* Position below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: #1c191c;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transform: translateY(-100%); /* Hide off-screen initially */
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-menu.active { /* When the menu is active */
+    display: flex;
+    transform: translateY(0); /* Slide in */
+  }
+
+  .navbar-menu li {
+    margin: 10px 0; /* Add spacing between items */
+  }
+}
+
+
 .navbar {
   position: fixed;
   top: 0;
@@ -201,6 +247,7 @@ section {
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
+  text-decoration: none; 
 }
 
 #arrow i {
