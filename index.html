@@ -1,252 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Women in Tech</title>
-    <link rel="icon" href="./assets/images/wit_logo.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
-</head>
-<body>
-    <!-- Navbar Section -->
+    <link rel="icon" href="./assets/images/wit_logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="nav-logo">
-                <img class="logo" src="./assets/images/logo2.png" alt="">
-                <a href="#" class="navbar-logo">WIT IIITD <br> A Student Chapter</a>
-            </div>
-            
-            <a href="#" class="burger-menu" id="burgerMenu">
-                <i class="ri-menu-line"></i>
-            </a>
-
-            <ul class="navbar-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#past-events">Events</a></li>
-                <li><a href="#team">Team</a></li>
-            </ul>
+      <div class="navbar-container">
+        <div class="nav-logo">
+          <img href="#" class="logo" src="./assets/images/logo2.png" alt="" />
+          <a href="#" class="navbar-logo"
+            >WIT IIITD <br />
+            A Student Chapter</a
+          >
         </div>
+
+        <div href="#" class="burger-menu" id="burgerMenu">
+          <i class="ri-menu-line"></i>
+        </div>
+
+        <ul class="navbar-menu">
+          <div class="navvv">
+            <li><a href="#home">Home</a></li>
+          </div>
+          <div class="navvv">
+            <li><a href="#about-us">About</a></li>
+          </div>
+          <div class="navvv">
+            <li><a href="#past-events">Events</a></li>
+          </div>
+          <div class="navvv">
+            <li><a href="#team">Team</a></li>
+          </div>
+        </ul>
+      </div>
     </nav>
 
     <!-- Main Content -->
     <div class="main">
-        <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="translucent-div"></div>
-            <div class="hero-content">
-                <h1>Women in Tech IIITD</h1>
-            </div>
-            <div class="arrow-container">
-                <a href="#past-events" id="arrow"> 
-                    <i class="ri-arrow-down-line"></i> 
-                </a>
-            </div>
-        </section>
+      <section id="home" class="hero">
+        <div class="translucent-div"></div>
+        <div class="hero-content">
+          <h1>Women in Tech IIITD</h1>
+        </div>
+        <div class="arrow-container">
+          <a href="#about-us" id="arrow">
+            <i class="ri-arrow-down-line"></i>
+          </a>
+        </div>
+      </section>
 
-        <section id="past-events" class="past-events">
-            <div class="past-events-heading">
-                <h1>Our Past Events</h1>
-                <h2>And <span class="many-more">many more</span>  to come</h2>
+      <section id="about-us" class="about-us">
+        <div class="wrapper">
+          <div class="about-heading">
+            <h1>About Us</h1>
+          </div>
+          <div class="about-us-content">
+            <p>
+              Women in Tech at IIITD is a platform dedicated to fostering an
+              inclusive and empowering environment for women pursuing careers in
+              technology. Our mission is to inspire, educate, and support women
+              in tech through workshops, mentorship programs, and networking
+              opportunities. We aim to break barriers and build a community
+              where women can thrive, innovate, and lead the way in
+              technological advancements. Together, we are shaping the future of
+              technology with diversity and inclusion at its core.
+            </p>
+          </div>
+          <div class="about-us-stats">
+            <div class="stat-box">
+              <h2>dd/mm/yyyy</h2>
+              <p>When it all started</p>
             </div>
-            <div class="past-events-container">
-                <div class="event-container">
-                    <div class="event-image">
-                        <img src="./assets/images/odyssey.png" alt="Event 1">
-                    </div>
-                    <div class="event-details">
-                        <h2>Odyssey: Tech <br>
-                            Stand-Up Comedy </h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
-                </div>
-                <div class="event-container">
-                    <div class="inner">
-                        <div class="event-image">
-                            <img src="./assets/images/google-step.png" alt="Event 2">
-                        </div>
-                        <div class="event-details">
-                            <h2>Google STEP <br>Mentorship Session</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="event-container">
-                    <div class="event-image">
-                        <img src="./assets/images/mentorship.png" alt="Event 3">
-                    </div>
-                    <div class="event-details">
-                        <h2>Google STEP <br>Mentorship Session</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
-                </div>
-                <div class="event-container">
-                    <div class="event-image">
-                        <img src="./assets/images/induction.png" alt="Event 4">
-                    </div>
-                    <div class="event-details">
-                        <h2>WiT Team Induction </h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
-                </div>
-                <div class="event-container">
-                    <div class="event-image">
-                        <img src="./assets/images/alumni.png" alt="Event 4">
-                    </div>
-                    <div class="event-details">
-                        <h2>Alumni Chat</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
-                </div>
-                <div class="event-container">
-                    <div class="event-image">
-                        <img src="./assets/images/lorem.png" alt="Event 4">
-                    </div>
-                    <div class="event-details">
-                        <h2>Google STEP <br>Mentorship Session</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                    </div>
-                </div>
+            <div class="stat-box highlight">
+              <h2>QQ+</h2>
+              <p>Members of IIITD student community</p>
             </div>
-        </section>
+            <div class="stat-box">
+              <h2>XX+</h2>
+              <p>Active Team Members</p>
+            </div>
+            <div class="stat-box">
+              <h2>X+</h2>
+              <p>Exciting Events Conducted</p>
+            </div>
+            <div class="stat-box">
+              <h2>QQ+</h2>
+              <p>Alumni currently in leading companies</p>
+            </div>
+            <div class="stat-box">
+              <h2>XXX+</h2>
+              <p>Members of global WIT Community</p>
+            </div>
+            <div class="stat-box">
+              <h2>24/7</h2>
+              <p>Lorem Ipsum</p>
+            </div>
+            <div class="stat-box">
+              <h2>xx</h2>
+              <p>Lorem Ipsum</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Team Section -->
-        <section id="team" class="team">
-            <div class="team-heading">     
-                <h1>Our dream team</h1>
+      <section id="past-events" class="past-events">
+        <div class="past-events-heading">
+          <h1>Our Past Events</h1>
+          <h2>And <span class="many-more">many more</span> to come</h2>
+        </div>
+        <div class="past-events-container">
+          <div class="event-container">
+            <div class="event-image">
+              <img src="./assets/images/odyssey.png" alt="Event 1" />
             </div>
-            <div class="team-caption">
-                <h3>This is where the <span class="magic">magic</span> happens</h3>
+            <div class="event-details">
+              <h2>
+                Odyssey: Tech <br />
+                Stand-Up Comedy
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt
+              </p>
             </div>
-            <div class="team-members">
-                <div class="member-container">
-                    <div class="img-container">
-                        <img src="./assets/images/yrj.png" alt="Yash Raj Ojha">
-                    </div>
-                    <div class="name-container">
-                        <h3 class="name">Yash Raj Ojha</h3>
-                        <h3 class="designation">Mentor</h3>
-                    </div>
-                </div>
-
-                <div class="coord-container">
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/Ayana.png" alt="Ayana">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Ayana</h3>
-                            <h3 class="designation">Coordinator</h3>
-                        </div>
-                    </div>
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/Jessica_Chawla.png" alt="Jessica Chawla">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Jessica Chawla</h3>
-                            <h3 class="designation">Coordinator</h3>
-                        </div>
-                    </div>
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/Sneha_Nagpal.png" alt="Sneha Nagpal">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Sneha Nagpal</h3>
-                            <h3 class="designation">Coordinator</h3>
-                        </div>
-                    </div>
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/.png" alt="Komal">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Komal</h3>
-                            <h3 class="designation">Coordinator</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lead-container">
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/Aditi_Sharma.png" alt="Aditi Sharma">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Aditi Sharma</h3>
-                            <h3 class="designation">Events Lead</h3>
-                        </div>
-                    </div>
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/Abhigyan.png" alt="Abhigyan">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Abhigyan</h3>
-                            <h3 class="designation">Coverage Lead</h3>
-                        </div>
-                    </div>
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/Divyanshi.png" alt="Divyanshi">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Divyanshi</h3>
-                            <h3 class="designation">Content Lead</h3>
-                        </div>
-                    </div>
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/Vanshika.png" alt="Vanshika">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Vanshika</h3>
-                            <h3 class="designation">PR Lead</h3>
-                        </div>
-                    </div>
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/Sushant.png" alt="Sushant">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Sushant</h3>
-                            <h3 class="designation">Web Dev Lead</h3>
-                        </div>
-                    </div>
-                    <div class="member-container">
-                        <div class="img-container">
-                            <img src="./assets/images/Vedika_Agarwal.png" alt="Vedika Agarwal">
-                        </div>
-                        <div class="name-container">
-                            <h3 class="name">Vedika Agarwal</h3>
-                            <h3 class="designation">Events Lead</h3>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="event-container">
+            <div class="inner">
+              <div class="event-image">
+                <img src="./assets/images/google-step.png" alt="Event 2" />
+              </div>
+              <div class="event-details">
+                <h2>Google STEP <br />Mentorship Session</h2>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt
+                </p>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="event-container">
+            <div class="event-image">
+              <img src="./assets/images/mentorship.png" alt="Event 3" />
+            </div>
+            <div class="event-details">
+              <h2>Google STEP <br />Mentorship Session</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt
+              </p>
+            </div>
+          </div>
+          <div class="event-container">
+            <div class="event-image">
+              <img src="./assets/images/induction.png" alt="Event 4" />
+            </div>
+            <div class="event-details">
+              <h2>WiT Team Induction</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt
+              </p>
+            </div>
+          </div>
+          <div class="event-container">
+            <div class="event-image">
+              <img src="./assets/images/alumni.png" alt="Event 4" />
+            </div>
+            <div class="event-details">
+              <h2>Alumni Chat</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt
+              </p>
+            </div>
+          </div>
+          <div class="event-container">
+            <div class="event-image">
+              <img src="./assets/images/lorem.png" alt="Event 4" />
+            </div>
+            <div class="event-details">
+              <h2>Google STEP <br />Mentorship Session</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        
+      <section id="team" class="team">
+        <div class="team-heading">
+          <h1>Our dream team</h1>
+        </div>
+        <div class="team-caption">
+          <h3>This is where the <span class="magic">magic</span> happens</h3>
+        </div>
+        <div class="team-members">
+          <div class="member-container">
+            <div class="img-container">
+              <img src="./assets/images/yrj.png" alt="Yash Raj Ojha" />
+            </div>
+            <div class="name-container">
+              <h3 class="name">Yash Raj Ojha</h3>
+              <h3 class="designation">Mentor</h3>
+            </div>
+          </div>
+
+          <div class="coord-container">
+            <div class="member-container">
+              <div class="img-container">
+                <img src="./assets/images/Ayana.png" alt="Ayana" />
+              </div>
+              <div class="name-container">
+                <h3 class="name">Ayana</h3>
+                <h3 class="designation">Coordinator</h3>
+              </div>
+            </div>
+            <div class="member-container">
+              <div class="img-container">
+                <img
+                  src="./assets/images/Jessica_Chawla.png"
+                  alt="Jessica Chawla"
+                />
+              </div>
+              <div class="name-container">
+                <h3 class="name">Jessica Chawla</h3>
+                <h3 class="designation">Coordinator</h3>
+              </div>
+            </div>
+            <div class="member-container">
+              <div class="img-container">
+                <img
+                  src="./assets/images/Sneha_Nagpal.png"
+                  alt="Sneha Nagpal"
+                />
+              </div>
+              <div class="name-container">
+                <h3 class="name">Sneha Nagpal</h3>
+                <h3 class="designation">Coordinator</h3>
+              </div>
+            </div>
+            <div class="member-container">
+              <div class="img-container">
+                <img src="./assets/images/komal.png" alt="Komal" />
+              </div>
+              <div class="name-container">
+                <h3 class="name">Komal</h3>
+                <h3 class="designation">Coordinator</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="lead-container">
+            <div class="member-container">
+              <div class="img-container">
+                <img
+                  src="./assets/images/Aditi_Sharma.png"
+                  alt="Aditi Sharma"
+                />
+              </div>
+              <div class="name-container">
+                <h3 class="name">Aditi Sharma</h3>
+                <h3 class="designation">Events Lead</h3>
+              </div>
+            </div>
+            <div class="member-container">
+              <div class="img-container">
+                <img src="./assets/images/Abhigyan.png" alt="Abhigyan" />
+              </div>
+              <div class="name-container">
+                <h3 class="name">Abhigyan</h3>
+                <h3 class="designation">Coverage Lead</h3>
+              </div>
+            </div>
+            <div class="member-container">
+              <div class="img-container">
+                <img src="./assets/images/Divyanshi.png" alt="Divyanshi" />
+              </div>
+              <div class="name-container">
+                <h3 class="name">Divyanshi</h3>
+                <h3 class="designation">Content Lead</h3>
+              </div>
+            </div>
+            <div class="member-container">
+              <div class="img-container">
+                <img src="./assets/images/Vanshika.png" alt="Vanshika" />
+              </div>
+              <div class="name-container">
+                <h3 class="name">Vanshika</h3>
+                <h3 class="designation">PR Lead</h3>
+              </div>
+            </div>
+            <div class="member-container">
+              <div class="img-container">
+                <img src="./assets/images/Sushant.png" alt="Sushant" />
+              </div>
+              <div class="name-container">
+                <h3 class="name">Sushant</h3>
+                <h3 class="designation">Web Dev Lead</h3>
+              </div>
+            </div>
+            <div class="member-container">
+              <div class="img-container">
+                <img
+                  src="./assets/images/Vedika_Agarwal.png"
+                  alt="Vedika Agarwal"
+                />
+              </div>
+              <div class="name-container">
+                <h3 class="name">Vedika Agarwal</h3>
+                <h3 class="designation">Events Lead</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="translucent-divvv">
+            <div class="left-footer">
+              <h1>WOMEN <span class="inn">IN</span> TECH</h1>
+            </div>
+            <div class="right-footer">
+              <div class="socials">
+                <h2>OUR SOCIALS</h2>
+                <div class="social-link">
+                  <a href="https://www.instagram.com/womenintechiiitd/"
+                    >Instagram</a
+                  >
+                  <a
+                    href="https://www.linkedin.com/in/women-in-tech-iiit-delhi-904918254/"
+                    >LinkedIn</a
+                  >
+                </div>
+              </div>
+              <div class="pages">
+                <h2>OUR PAGES</h2>
+                <div class="page-link">
+                  <a href="#home">Home</a>
+                  <a href="#about-us">About</a>
+                  <a href="#past-events">Events</a>
+                  <a href="#team">Team</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <!-- Scripts -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="script.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const burgerMenu = document.getElementById('burgerMenu');
-            const navMenu = document.querySelector('.navbar-menu');
-            
-            burgerMenu.addEventListener('click', () => {
-                navMenu.classList.toggle('active'); // Toggle the 'active' class
-            });
+      document.addEventListener("DOMContentLoaded", () => {
+        const burgerMenu = document.getElementById("burgerMenu");
+        const navMenu = document.querySelector(".navbar-menu");
+
+        burgerMenu.addEventListener("click", () => {
+          navMenu.classList.toggle("active"); // Toggle the 'active' class
+          burgerMenu.classList.toggle("active");
         });
+      });
     </script>
-    
-</body>
+  </body>
 </html>
