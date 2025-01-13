@@ -1076,11 +1076,11 @@ button, a {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
-.mailbutton:hover h2 {
+.mailbutton:hover h3 {
   color: #1c191c;
 }
 
-.mailbutton h2 {
+.mailbutton h3 {
   font-family: "Archivo", sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
