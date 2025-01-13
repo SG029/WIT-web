@@ -47,3 +47,41 @@ headings.forEach((heading) => {
     cursor.style.height = `${cursorSize}px`;
   });
 });
+
+
+const headingss = document.querySelectorAll('h2');
+
+headingss.forEach((heading) => {
+  heading.addEventListener('mouseenter', () => {
+    cursorSize = 100; // Increase cursor size when hovering over h1
+    cursor.style.width = `${cursorSize}px`;
+    cursor.style.height = `${cursorSize}px`;
+  });
+
+  heading.addEventListener('mouseleave', () => {
+    cursorSize = 25; // Reset cursor size
+    cursor.style.width = `${cursorSize}px`;
+    cursor.style.height = `${cursorSize}px`;
+  });
+});
+
+// var clutter = "";
+
+// document.querySelector(".about-us-content>p").textContent.split("").forEach(function(dets) {
+//   clutter += `<span>${dets}</span>`;
+// });
+
+// document.querySelector(".about-us-content>p").innerHTML = clutter;
+
+// gsap.to(".about-us-content>p>span", {
+//   scrollTrigger: {
+//     trigger: ".about-us-content>p>span",
+//     start: "top bottom", // First value is for element, second is for the screen
+//     end: "bottom top",
+//     scroller: "#main",
+//     scrub: 0.1,
+//     markers:true,
+//   },
+//   stagger: 0.01,
+//   color: "#fff",
+// });

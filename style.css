@@ -387,7 +387,7 @@ button, a {
   line-height: 1.7rem;
   margin-bottom: 5rem;
   margin-top: 2rem;
-  color: #fff;
+  color: #ffffff;
   width: 80%;
   letter-spacing: 0.03rem;
   text-align: center; /* Centers the text within the paragraph */
@@ -1119,6 +1119,18 @@ button, a {
 .names{
   font-weight: 600;
   color: #89d1dd;
+}
+
+.github-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.github-link:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 @media (max-width: 1200px) {
