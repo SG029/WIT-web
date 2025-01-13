@@ -19,6 +19,13 @@
   font-style: normal;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body::-webkit-scrollbar {
   display: block;
   width: 8px;
@@ -46,6 +53,33 @@ body {
 section {
   padding: 50px 20px;
 }
+
+/* Cursor Style */
+.cursor {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  background-color: #f7b32b;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: all 0.1s ease;
+  will-change: transform;
+}
+
+
+@media (max-width:1100px) {
+  .cursor{
+    opacity: 0;
+  }
+}
+
+button, a {
+  cursor: none;
+}
+
+
 
 /* Burger Menu */
 .burger-menu {
@@ -190,9 +224,6 @@ section {
   transition: background-color 0.3s ease;
 }
 
-.navvv:hover {
-  background-color: #f7b32b; /* Dark background on hover */
-}
 
 .navvv a {
   color: #f7b32b;
@@ -207,7 +238,6 @@ section {
 
 .navvv:hover {
   background-color: #f7b32b; /* Dark background on hover */
-  color: #1c191c;
 }
 
 .navvv a {
@@ -221,7 +251,7 @@ section {
   padding: 0px 15px; /* Match the padding of the parent div */
 }
 
-.navvv a:hover {
+.navvv:hover a{
   color: #2d1e2f; /* Change text color on hover */
 }
 
@@ -266,7 +296,6 @@ section {
   font-size: 7.5rem;
   margin-top: 70px;
   letter-spacing: 0.2rem;
-  width: 100%;
   text-align: center;
   z-index: 3;
   color: white;
@@ -611,7 +640,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 80vw;
+  width: 78vw;
   margin-top: 20px;
   gap: 40px;
 }
@@ -885,10 +914,11 @@ section {
   padding: 2rem;
   position: relative;
   box-sizing: border-box; 
+  padding-bottom: 10px;
 }
 
 .footer-container {
-  min-height: 18rem;
+  min-height: 20rem;
   width: 100%;
   background-image: url("./assets/images/footer-bg.png");
   background-size: cover;
@@ -897,7 +927,7 @@ section {
   position: relative;
   box-sizing: border-box; 
   border-radius: 2rem;
-  margin-bottom: -10rem;
+  /* gap:10rem; */
 }
 
 .translucent-divvv {
@@ -911,18 +941,20 @@ section {
   opacity: 0.9;
   border-radius: 1rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 5rem;
+  align-items: center; /* Center align items horizontally */
+  justify-content: space-around; /* Center align items vertically */
+  padding: 2rem; /* Add padding to prevent overflow */
   box-sizing: border-box;
-  /* align-items: flex-start;   */
+  overflow: hidden; /* Prevent content from overflowing */
+  gap:3rem;
 }
+
+
 .left-footer h1 {
   font-size: 10rem;
   color: white;
   font-family: "six caps", sans-serif;
   letter-spacing: 0.2rem;
-  /* margin-bottom: -2rem; */
 }
 .inn {
   color: #44b1cb;
@@ -955,7 +987,7 @@ section {
   font-size: 1.5rem;
   color: #fff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 .social-link {
   display: flex;
@@ -991,113 +1023,271 @@ section {
   font-size: 1.5rem;
   color: #fff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
   margin-top: -0.2rem;
 }
+
+.footer a:hover{
+  color: #f7b32b;
+}
+
+.right-footer a:hover{
+  transform: scale(1.1);
+}
+
+.mailbutton {
+  display: flex;
+  align-items: center; /* Aligns img and h2 vertically */
+  gap: 20px;
+  padding: 15px 20px;
+  border: 3px solid white;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  margin-top: -2rem;
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mailbutton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #f7b32b;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.mailbutton:hover {
+  border: 3px solid #1c191c;
+}
+
+.mailbutton:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.mailbutton:hover h2 {
+  color: #1c191c;
+}
+
+.mailbutton h2 {
+  font-family: "Archivo", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.mailbutton img {
+  width: 25px;
+  transition: filter 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.mailbutton:hover img {
+  filter: invert(22%) sepia(22%) saturate(750%) hue-rotate(130deg) brightness(0) contrast(100%);
+}
+.mailbutton a{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.copy {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 100;
+  color: #fff;
+  font-family: "Archivo", sans-serif;
+}
+
+.names{
+  font-weight: 600;
+  color: #89d1dd;
+}
+
+@media (max-width: 1200px) {
+  .mailbutton {
+    padding: 12px 16px; /* Slightly reduce padding */
+    gap: 15px; /* Slightly reduce gap */
+  }
+
+  .mailbutton h2 {
+    font-size: 1.2rem; /* Slightly reduce font size */
+  }
+  .footer h1{
+    font-size: 9rem;
+  }
+}
+
+/* Media Query for 768px */
+@media (max-width: 768px) {
+  .mailbutton {
+    padding: 10px 12px; /* Further reduce padding */
+    gap: 10px; /* Further reduce gap */
+  }
+
+  .mailbutton h2 {
+    font-size: 1.1rem; /* Further reduce font size */
+  }
+
+  .mailbutton img {
+    width: 22px; /* Slightly reduce image size */
+  }
+}
+
+/* Media Query for 480px */
+@media (max-width: 480px) {
+  .mailbutton {
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text */
+  }
+
+  .mailbutton h2 {
+    font-size: 1rem; /* Reduce font size */
+    margin-top: 5px; /* Add some space between icon and text */
+  }
+}
+
 
 
 @media (max-width: 768px) {
   .footer {
-    padding: 1rem; /* Reduce padding */
+    padding: 1.5rem;
   }
+
   .footer-container {
-    min-height: 10rem; /* Reduce height */
-    margin-bottom: -5rem; /* Reduce negative margin */
+    min-height:40rem;
+    border-radius: 1.5rem;
   }
+  .left-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
   .translucent-divvv {
-    padding: 2rem 1rem; /* Reduce padding */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    padding: 2rem;
+    gap: 0;
   }
+
+  .left-footer {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
   .left-footer h1 {
-    font-size: 6rem; /* Reduce font size */
+    font-size: 6rem; /* Smaller font size */
   }
+
+  .mailbutton {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-top: -1rem;
+  }
+
+  .mailbutton svg {
+    width: 35px;
+  }
+
   .right-footer {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     align-items: center;
     margin-right: 0;
   }
+
   .socials, .pages {
     margin-right: 0;
   }
+
   .socials h2, .pages h2 {
-    font-size: 3rem; /* Reduce font size */
+    font-size: 3rem;
   }
+
   .socials a, .pages a {
-    font-size: 1.2rem; /* Reduce font size */
-  }
-  .footer {
-    min-height: 60vh; /* Increased height for tablets */
-  }
-  .footer-container {
-    min-height: 25rem; /* Increased height for tablets */
+    font-size: 1.3rem;
   }
 }
 
+/* Responsive Styles for Mobile Screens (max-width: 480px) */
 @media (max-width: 480px) {
-  .footer-container {
-    min-height: 10rem; /* Further reduce height */
-    margin-bottom: -3rem; /* Further reduce negative margin */
-  }
-  .translucent-divvv {
-    padding: 1rem; /* Further reduce padding */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center;
-    min-height: 60rem;
-  }
-  .left-footer h1 {
-    font-size: 4rem; /* Further reduce font size */
-    margin-bottom: 0;
-  }
-  .socials, .pages {
-    margin-bottom: 1rem; /* Add spacing below each section */
-    margin-top: 0;
-  }
-  .socials h2, .pages h2 {
-    font-size: 2rem; /* Further reduce font size */
-  }
-  .socials a, .pages a {
-    font-size: 1rem; /* Further reduce font size */
-  }
   .footer {
-    min-height: 60vh; /* Increased height for mobile */
+    padding: 1rem;
   }
+
   .footer-container {
-    min-height: 50rem; /* Increased height for mobile */
+    min-height: 50rem;
+    border-radius: 1rem;
+  }
+
+  .translucent-divvv {
+    padding: 1rem;
+  }
+
+  .left-footer h1 {
+    font-size: 4rem; 
+  }
+
+  .mailbutton {
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    margin-top: -1rem;
+  }
+
+  .mailbutton svg {
+    width: 30px;
+  }
+
+  .socials h2, .pages h2 {
+    font-size: 2.5rem;
+  }
+
+  .socials a, .pages a {
+    font-size: 1rem;
+  }
+
+  .copy {
+    font-size: 1rem;
+    margin-top: 0.5rem;
   }
 }
 
-
-@media (max-width: 1116px) {
-  .footer {
-    padding: 1rem; /* Reduce padding */
+@media (max-width: 1100px){
+  .footer-container h1{
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    line-height: 7rem;
   }
-  .footer-container {
-    min-height: 30rem; /* Reduce height */
-    margin-bottom: -5rem; /* Reduce negative margin */
+  .footer-container a{
+    font-size: 1.5rem;
   }
-  .translucent-divvv {
-    padding: 2rem 1rem; /* Reduce padding */
+  .mailbutton h2{
+    font-size: 1rem;
   }
-  .left-footer h1 {
-    font-size: 6rem; /* Reduce font size */
-  }
-  .right-footer {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center;
-    margin-right: 0;
-  }
-  .socials, .pages {
-    margin-right: 0;
-  }
-  .socials h2, .pages h2 {
-    font-size: 3rem; /* Reduce font size */
-  }
-  .socials a, .pages a {
-    font-size: 1.2rem; /* Reduce font size */
-  }
-  .footer {
-    min-height: 60vh; /* Increased height for tablets */
-  }
-  .footer-container {
-    min-height: 25rem; /* Increased height for tablets */
+  .right-footer h2{
+    font-size: 3rem;
   }
 }
