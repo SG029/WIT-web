@@ -1119,6 +1119,7 @@ button, a {
 .names{
   font-weight: 600;
   color: #89d1dd;
+  letter-spacing: 0.03rem;
 }
 
 .github-link {
