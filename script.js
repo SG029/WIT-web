@@ -65,3 +65,25 @@ headingss.forEach((heading) => {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loaderScreen = document.getElementById("loaderScreen");
+  const mainContentWrapper = document.getElementById("mainContentWrapper");
+  const progressBar = document.getElementById("progressBar");
+
+  let progress = 0;
+  const interval = setInterval(() => {
+    progress += 5; // Increment progress
+    progressBar.style.width = progress + "%";
+
+    if (progress >= 100) {
+      clearInterval(interval);
+      // Hide loader and start scrolling up
+      setTimeout(() => {
+        loaderScreen.style.transition = "transform 0.5s ease-in-out";
+        loaderScreen.style.transform = "translateY(-100%)"; // Scroll up
+        mainContentWrapper.style.display = "block"; // Reveal content
+      }, 200); // Delay to ensure progress bar finishes
+    }
+  }, 100); // Adjust the interval speed (100ms)
+});
