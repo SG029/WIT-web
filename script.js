@@ -65,23 +65,3 @@ headingss.forEach((heading) => {
   });
 });
 
-// var clutter = "";
-
-// document.querySelector(".about-us-content>p").textContent.split("").forEach(function(dets) {
-//   clutter += `<span>${dets}</span>`;
-// });
-
-// document.querySelector(".about-us-content>p").innerHTML = clutter;
-
-// gsap.to(".about-us-content>p>span", {
-//   scrollTrigger: {
-//     trigger: ".about-us-content>p>span",
-//     start: "top bottom", // First value is for element, second is for the screen
-//     end: "bottom top",
-//     scroller: "#main",
-//     scrub: 0.1,
-//     markers:true,
-//   },
-//   stagger: 0.01,
-//   color: "#fff",
-// });
