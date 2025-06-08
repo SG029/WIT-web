@@ -78,11 +78,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (progress >= 100) {
       clearInterval(interval);
-      // Hide loader and start scrolling up
+      // Add zoom and fade effect
       setTimeout(() => {
-        loaderScreen.style.transition = "transform 0.5s ease-in-out";
-        loaderScreen.style.transform = "translateY(-100%)"; // Scroll up
+        loaderScreen.style.transition = "all 1s ease-in-out";
+        loaderScreen.style.transform = "scale(15)"; // Zoom effect
+        loaderScreen.style.opacity = "0"; // Fade out
         mainContentWrapper.style.display = "block"; // Reveal content
+        
+        // Remove loader after animation
+        setTimeout(() => {
+          loaderScreen.style.display = "none";
+        }, 1000);
       }, 200); // Delay to ensure progress bar finishes
     }
   }, 100); // Adjust the interval speed (100ms)
