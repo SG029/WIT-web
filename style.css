@@ -186,6 +186,15 @@ button, a {
   .navbar-menu a:hover {
     color: #ffd700; /* Change to a brighter gold color on hover */
   }
+  
+  /* Hide team section and nav item */
+  .team {
+    display: none;
+  }
+  
+  .navbar-menu li a[href="#team"] {
+    display: none;
+  }
 }
 
 /* Navbar */
@@ -540,7 +549,6 @@ button, a {
     font-size: 0.8rem;
   }
 }
-
 .team {
   background: #1c191c;
   text-align: center;
@@ -683,6 +691,12 @@ button, a {
   width: 78vw;
   margin-top: 20px;
   gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .team {
+    display: none;
+  }
 }
 
 .past-events {
