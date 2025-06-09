@@ -119,8 +119,6 @@ button, a {
   cursor: none;
 }
 
-
-
 /* Burger Menu */
 .burger-menu {
   display: none; /* Hide by default */
@@ -145,9 +143,8 @@ button, a {
   .burger-menu {
     display: block; /* Show the burger menu on smaller screens */
   }
-
   .navbar-menu {
-    display: none; /* Hide the regular menu initially */
+    display: flex; /* Hide the regular menu initially */
     position: absolute;
     top: 70px; /* Position below the navbar */
     left: 0;
@@ -155,9 +152,13 @@ button, a {
     background-color: #1c191c; /* Dark background */
     flex-direction: column;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
+    justify-content: space-around;
+    gap: 5px;
     transform: translateY(-100%); /* Hide off-screen initially */
     transition: transform 0.3s ease; /* Smooth slide-in effect */
+    margin-left: 10vw;
+    margin-right: 10vw;
   }
 
   .navbar-menu.active {
@@ -195,6 +196,14 @@ button, a {
   .navbar-menu li a[href="#team"] {
     display: none;
   }
+
+  /* Add join button to burger menu */
+  .navbar-menu .join-button {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 200px;
+  }
 }
 
 /* Navbar */
@@ -216,7 +225,7 @@ button, a {
   width: 90%;
   max-width: 1200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -224,6 +233,13 @@ button, a {
 .nav-logo {
   display: flex;
   align-items: center;
+  
+}
+
+@media (max-width: 768px) {
+  .nav-logo {
+    margin-left:5vw;
+  }
 }
 
 .nav-logo .logo {
@@ -241,7 +257,6 @@ button, a {
   text-decoration: none; /* Remove underline */
   line-height: 1.1rem;
 }
-
 /* Navbar Menu */
 .navbar-menu {
   list-style: none;
@@ -273,7 +288,6 @@ button, a {
   transition: background-color 0.3s ease;
 }
 
-
 .navvv a {
   color: #f7b32b;
   text-decoration: none; /* Remove underline */
@@ -286,7 +300,7 @@ button, a {
 }
 
 .navvv:hover {
-  background-color: #f7b32b; /* Dark background on hover */
+  background-color: #f7b32b; /* Yellow background on hover */
 }
 
 .navvv a {
@@ -300,8 +314,40 @@ button, a {
   padding: 0px 15px; /* Match the padding of the parent div */
 }
 
-.navvv:hover a{
+.navvv:hover a {
   color: #2d1e2f; /* Change text color on hover */
+}
+
+.join-button {
+  background-color: #f7b32b;
+  color: #2d1e2f;
+  border-radius: 100px;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  font-family: "Archivo", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  border: none;
+  cursor: pointer;
+}
+
+.join-button:hover {
+  background-color: #89d1dd;
+  color: #2d1e2f;
+}
+
+@media (max-width: 768px) {
+  .join-button {
+    display: none; /* Hide the original join button */
+  }
+  
+  .navbar-menu .join-button {
+    display: block; /* Show join button in menu */
+    margin: 20px auto; /* Center the button */
+    margin-right: 0; /* Reset the negative margin */
+    width: fit-content; /* Make button width fit content */
+  }
 }
 
 .hero {

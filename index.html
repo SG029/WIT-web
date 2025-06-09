@@ -14,10 +14,15 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
   </head>
   <body>
-    <div class="loader-screen" id="loaderScreen">
+    <!-- <div class="loader-screen" id="loaderScreen">
       <img
         src="./assets/images/logo2.png"
         alt="Loading"
@@ -26,7 +31,7 @@
       <div class="progress-bar">
         <div class="progress-bar-inner" id="progressBar"></div>
       </div>
-    </div>
+    </div> -->
     <div>
       <nav class="navbar">
         <div class="navbar-container">
@@ -56,6 +61,7 @@
               <li><a href="#team">Team</a></li>
             </div>
           </ul>
+          <button class="join-button">Join Us</button>
         </div>
       </nav>
 
@@ -95,32 +101,32 @@
             </div>
             <div class="about-us-stats">
               <div class="stat-box">
-                <h2>dd/mm/yyyy</h2>
-                <p>When it all started</p>
+                <h2>5+</h2>
+                <p>Years of operation</p>
               </div>
               <div class="stat-box highlight">
-                <h2>QQ+</h2>
+                <h2>+</h2>
                 <p>Members of IIITD student community</p>
               </div>
               <div class="stat-box">
-                <h2>XX+</h2>
+                <h2>50+</h2>
                 <p>Active Team Members</p>
               </div>
               <div class="stat-box">
-                <h2>X+</h2>
+                <h2>10+</h2>
                 <p>Exciting Events Conducted</p>
               </div>
               <div class="stat-box">
-                <h2>QQ+</h2>
+                <h2>10+</h2>
                 <p>Alumni currently in leading companies</p>
               </div>
               <div class="stat-box">
-                <h2>XXX+</h2>
+                <h2>2.5 Lakh+</h2>
                 <p>Members of global WIT Community</p>
               </div>
               <div class="stat-box">
-                <h2>24/7</h2>
-                <p>Lorem Ipsum</p>
+                <h2>1000+</h2>
+                <p>Social media community size</p>
               </div>
               <div class="stat-box">
                 <h2>xx</h2>
@@ -129,7 +135,6 @@
             </div>
           </div>
         </section>
-
         <section id="past-events" class="past-events">
           <div class="past-events-heading">
             <h1>Our Past Events</h1>
@@ -143,11 +148,10 @@
               <div class="event-details">
                 <h2>
                   Odyssey: Tech <br />
-                  Stand-Up Comedy
+                  Ctrl+Alt+Laugh
                 </h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt
+                  Ctrl+Alt+Laugh brought the house down with hilarious question-only banter, rapid-fire improv, and techy stand-up sets! A night full of wit, laughter, and unforgettable comedic talent 🎤🎭
                 </p>
               </div>
             </div>
@@ -159,8 +163,7 @@
                 <div class="event-details">
                   <h2>Google STEP <br />Mentorship Session</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt
+                    Women in Tech (WIT) hosted an insightful session on Google's STEP Internship and a mentorship program to guide students through the journey. Huge thanks to the past interns whose experiences turned a daunting process into an achievable goal for all aspiring candidates! 🚀
                   </p>
                 </div>
               </div>
@@ -170,10 +173,10 @@
                 <img src="./assets/images/mentorship.png" alt="Event 3" />
               </div>
               <div class="event-details">
-                <h2>Google STEP <br />Mentorship Session</h2>
+                <h2>E-cell Pathshala</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt
+                  WiT in collaboration with E-cell IIITD - From decoding the startup ecosystem to exploring funding strategies and business scaling, this session was a goldmine of insights!
+
                 </p>
               </div>
             </div>
@@ -184,8 +187,10 @@
               <div class="event-details">
                 <h2>WiT Team Induction</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt
+                  WIT conducted it's induction meeting, welcoming the newest members to the family! 🎉Here's to building a stronger community together!✨
+#WomenInTech #WiTClub #Empowerment
+#TechLeaders #Innovation #Community
+
                 </p>
               </div>
             </div>
@@ -194,10 +199,10 @@
                 <img src="./assets/images/alumni.png" alt="Event 4" />
               </div>
               <div class="event-details">
-                <h2>Alumni Chat</h2>
+                <h2>Alumni Connect series- session 1
+                </h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt
+                  WIT IIITD proudly kicked off the Alumni Connect Series with Ms. Gargi Gupta (Class of 2019), now at EY-Parthenon. She shared her journey from IIIT-Delhi to London Business School, offering insights on career shifts, global education, and tech-meets-management paths!
                 </p>
               </div>
             </div>
@@ -206,13 +211,15 @@
                 <img src="./assets/images/lorem.png" alt="Event 4" />
               </div>
               <div class="event-details">
-                <h2>Google STEP <br />Mentorship Session</h2>
+                <h2>WiT Lab Tour for <br> school students</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt
+                  Women in Tech IIITD, in collaboration with Responsible AI UK and Technovation, hosted a lab tour during the recent IIIT-Delhi event. With a workshop on Responsible AI and a hackathon for 75 high-school girls, the day sparked curiosity, inspired innovation, and empowered future women in tech! 💡🤖💪
                 </p>
               </div>
             </div>
+          </div>
+          <div style="text-align: center; margin-top: 2rem;">
+            <a href="events.html" class="view-more-btn" style="display: inline-block; padding: 1rem 2rem; background-color: #44b1cb; color: white; text-decoration: none; border-radius: 50px; font-family: 'Archivo', sans-serif; font-weight: 600; transition: all 0.3s ease; border-radius: 9999px;" onmouseover="this.style.backgroundColor='#f7b32b'; this.style.color='#2d1e2f'" onmouseout="this.style.backgroundColor='#44b1cb'; this.style.color='white'">View More Events</a>
           </div>
         </section>
 
@@ -419,14 +426,8 @@
             </div>
           </div>
           <h3 class="copy">
-            Copyright © 2025 | Designed by
-            <span class="names">Riya Jain & team</span>, Developed by
-            <span class="names">
-              <a href="https://github.com/SG029" target="_blank" class="github-link">
-                Sushant Gola
-              </a>
-              & team
-            </span>
+            Copyright © 2025 |
+            <span class="names"></span>Made with ❤️ by <span class="names">team WiT</span>
           </h3>
           
         </footer>

@@ -1,3 +1,4 @@
+
 document.querySelectorAll('.mailbutton').forEach((button) => {
   const strength = 10; 
 
@@ -84,6 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const loaderScreen = document.getElementById("loaderScreen");
   const mainContentWrapper = document.getElementById("mainContentWrapper");
   const progressBar = document.getElementById("progressBar");
+
+  // Check if elements exist before proceeding
+  if (!loaderScreen || !mainContentWrapper || !progressBar) {
+    return; // Exit if elements not found
+  }
 
   let progress = 0;
   const interval = setInterval(() => {
