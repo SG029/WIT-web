@@ -52,25 +52,108 @@
   section {
     padding: 50px 20px;
   }
-  
-  /* Burger Menu */
-  .burger-menu {
-    display: none;
+
+/* Burger Menu */
+.burger-menu {
+    display: none; /* Hide by default */
     position: relative;
-    z-index: 1001;
+    z-index: 1001; /* Ensure it's above the navbar */
     cursor: pointer;
-    flex-shrink: 0;
   }
   
   .burger-menu i {
     font-size: 2rem;
-    color: #f7b32b;
-    text-decoration: none;
-    transition: transform 0.3s ease;
+    color: #f7b32b; /* Or your desired color */
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
   }
   
   .burger-menu.active i {
-    transform: rotate(90deg);
+    transform: rotate(90deg); /* Rotate the icon when active */
+  }
+  
+  /* Media Query for responsiveness (e.g., 768px) */
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block; /* Show the burger menu on smaller screens */
+    }
+    .navbar-menu {
+      display: flex; /* Hide the regular menu initially */
+      position: absolute;
+      top: 70px; /* Position below the navbar */
+      left: 0;
+      width: 100%;
+      background-color: #1c191c; /* Dark background */
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      justify-content: space-around;
+      gap: 5px;
+      transform: translateY(-100%); /* Hide off-screen initially */
+      transition: transform 0.3s ease; /* Smooth slide-in effect */
+      margin-left: 10vw;
+      margin-right: 10vw;
+    }
+  
+    .navbar-menu.active {
+      /* When the menu is active */
+      display: flex;
+      transform: translateY(0); /* Slide in */
+    }
+  
+    .navbar-menu li {
+      margin: 10px 0; /* Add spacing between menu items */
+    }
+  
+    /* .navvv {
+      background-color: #89d1dd;
+    } */
+    .navbar-menu a {
+      font-family: "Archivo", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f7b32b; /* Gold color for links */
+      text-decoration: none; /* Remove underline from links */
+      transition: color 0.3s ease; /* Smooth color change on hover */
+      /* background-color: #44b1cb; */
+    }
+  
+    .navbar-menu a:hover {
+      color: #ffd700; /* Change to a brighter gold color on hover */
+    }
+    
+    /* Hide team section and nav item */
+    .team {
+      display: none;
+    }
+    
+    .navbar-menu li a[href="#team"] {
+      display: none;
+    }
+  
+    /* Add join button to burger menu */
+    .navbar-menu .join-button {
+      display: block;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 200px;
+      background-color: #f7b32b;
+      color: #2d1e2f;
+      border-radius: 100px;
+      padding: 10px 20px;
+      font-family: "Archivo", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.05rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    .navbar-menu .join-button:hover {
+      background-color: #89d1dd;
+      color: #2d1e2f;
+    }
   }
   
   /* Navbar */
@@ -80,36 +163,39 @@
     left: 0;
     width: 100%;
     height: 70px;
-    background-color: #1c191c;
+    background-color: #1c191c; /* Matches the dark theme of the page */
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    z-index: 1000; /* Ensures the navbar is always on top */
   }
   
   .navbar-container {
     width: 90%;
     max-width: 1200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    position: relative;
   }
   
-  /* Logo and Text - Always visible */
+  /* Logo and Text */
   .nav-logo {
     display: flex;
     align-items: center;
-    flex-shrink: 0;
-    z-index: 1002; /* Higher z-index to ensure it's always on top */
+    
+  }
+  
+  @media (max-width: 768px) {
+    .nav-logo {
+      margin-left:5vw;
+    }
   }
   
   .nav-logo .logo {
-    height: 35px;
+    height: 35px; /* Adjust logo size */
     width: auto;
     margin-right: 20px;
-    display: block;
   }
   
   .navbar-logo {
@@ -117,17 +203,17 @@
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.05rem;
-    color: #89d1dd;
-    text-decoration: none;
+    color: #89d1dd; /* Gold accent color */
+    text-decoration: none; /* Remove underline */
     line-height: 1.1rem;
   }
-  
   /* Navbar Menu */
   .navbar-menu {
     list-style: none;
     display: flex;
     gap: 50px;
     margin: 0;
+    padding: 0;
     padding: 10px;
   }
   
@@ -137,49 +223,49 @@
   
   .navbar-menu a {
     color: #f7b32b;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline from links */
     font-family: "Archivo", sans-serif;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth color change on hover */
     font-weight: 600;
     letter-spacing: 0.05rem;
   }
   
   .navvv {
-    padding: 5px;
-    border-radius: 10rem;
-    display: inline-block;
+    padding: 5px; /* Add padding to give it button-like feel */
+    border-radius: 10rem; /* Rounded corners */
+    display: inline-block; /* To make it behave like a button */
     transition: background-color 0.3s ease;
   }
   
   .navvv a {
     color: #f7b32b;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline */
     font-family: "Archivo", sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 0.05rem;
-    display: block;
-    padding: 10px 20px;
+    display: block; /* Ensure the link takes up the entire div */
+    padding: 10px 20px; /* Match the padding of the parent div */
   }
   
   .navvv:hover {
-    background-color: #f7b32b;
+    background-color: #f7b32b; /* Yellow background on hover */
   }
   
   .navvv a {
     color: #f7b32b;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline */
     font-family: "Archivo", sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 0.05rem;
-    display: block;
-    padding: 0px 15px;
+    display: block; /* Ensure the link takes up the entire div */
+    padding: 0px 15px; /* Match the padding of the parent div */
   }
   
   .navvv:hover a {
-    color: #2d1e2f;
+    color: #2d1e2f; /* Change text color on hover */
   }
   
   .join-button {
@@ -187,7 +273,7 @@
     color: #2d1e2f;
     border-radius: 100px;
     transition: background-color 0.3s ease;
-    padding: 10px 20px;
+    padding: 0px 20px;
     font-family: "Archivo", sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
@@ -200,6 +286,28 @@
     background-color: #89d1dd;
     color: #2d1e2f;
   }
+  
+@media (min-width: 769px) {
+  .join-button {
+    display: block;
+    background-color: #f7b32b;
+    color: #2d1e2f;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    font-family: "Archivo", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  .join-button:hover {
+    background-color: #89d1dd;
+    color: #2d1e2f;
+  }
+}
   
   /* Media Query for responsiveness */
   @media (max-width: 768px) {
@@ -382,11 +490,12 @@
     padding: 7px;
     position: relative;
     overflow: hidden;
+    min-height: 66vh;
   }
   
   .inner {
     width: calc(100% - 14px);
-    height: calc(100% - 14px);
+    min-height: calc(100% - 14px);
     background: #f7b32b;
     position: absolute;
     top: 7px;

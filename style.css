@@ -118,7 +118,6 @@ section {
 button, a {
   cursor: none;
 }
-
 /* Burger Menu */
 .burger-menu {
   display: none; /* Hide by default */
@@ -203,6 +202,22 @@ button, a {
     margin: 20px auto;
     width: 80%;
     max-width: 200px;
+    background-color: #f7b32b;
+    color: #2d1e2f;
+    border-radius: 100px;
+    padding: 10px 20px;
+    font-family: "Archivo", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-menu .join-button:hover {
+    background-color: #89d1dd;
+    color: #2d1e2f;
   }
 }
 
@@ -323,7 +338,7 @@ button, a {
   color: #2d1e2f;
   border-radius: 100px;
   transition: background-color 0.3s ease;
-  padding: 10px 20px;
+  padding: 5px 20px;
   font-family: "Archivo", sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
@@ -814,11 +829,12 @@ button, a {
   padding: 7px;
   position: relative;
   overflow: hidden; /* Prevent content overflow */
+  min-height: 66vh;
 }
 
 .inner {
   width: calc(100% - 14px);
-  height: calc(100% - 14px);
+  min-height: calc(100% - 14px);
   background: #f7b32b;
   position: absolute;
   top: 7px;

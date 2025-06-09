@@ -2,6 +2,7 @@
 const burgerMenu = document.querySelector('.burger-menu');
 const navbarMenu = document.querySelector('.navbar-menu');
 const burgerIcon = document.querySelector('.burger-menu i');
+const joinButton = document.querySelector('.join-button');
 
 // Set default burger icon
 burgerIcon.classList.add('ri-menu-line');
@@ -79,3 +80,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Remove team link and add join button on mobile
+const teamLink = document.querySelector('a[href="index.html#team"]').parentElement;
+if (window.innerWidth <= 768) {
+  teamLink.remove();
+  const joinButtonMobile = document.createElement('li');
+  joinButtonMobile.className = 'navvv';
+  joinButtonMobile.innerHTML = '<a href="#">Join Us</a>';
+  navbarMenu.appendChild(joinButtonMobile);
+}
+
+window.addEventListener('resize', () => {
+  const teamLink = document.querySelector('a[href="index.html#team"]')?.parentElement;
+  const joinButtonMobile = navbarMenu.querySelector('li:last-child');
+  
+  if (window.innerWidth <= 768) {
+    if (teamLink) teamLink.remove();
+    if (!joinButtonMobile) {
+      const newJoinButton = document.createElement('li');
+      newJoinButton.className = 'navvv';
+      newJoinButton.innerHTML = '<a href="#">Join Us</a>';
+      navbarMenu.appendChild(newJoinButton);
+    }
+  }
+});
+
+// Function to add click handler to the Join Us button
+function addJoinUsHandler() {
+    const joinLinks = navbarMenu.querySelectorAll('.join-button');
+    joinLinks.forEach(link => {
+      link.setAttribute('href', 'https://whatsapp.com/channel/0029Vam3dalGehEH1Gj66N12');
+      // Optionally open in new tab:
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    });
+  }
+  
+  // Call once on load
+  addJoinUsHandler();
+  
+  // Call again on resize in case Join Us is dynamically added
+  window.addEventListener('resize', () => {
+    addJoinUsHandler();
+  });
